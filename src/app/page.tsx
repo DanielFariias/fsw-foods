@@ -1,5 +1,5 @@
-import { Header } from "@/components/header";
-import { Search } from "@/components/search";
+import { Header } from '@/components/header'
+import { Search } from '@/components/search'
 
 export default function Home() {
   return (
@@ -9,5 +9,5 @@ export default function Home() {
         <Search />
       </div>
     </main>
-  );
+  )
 }
