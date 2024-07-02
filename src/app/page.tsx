@@ -1,11 +1,11 @@
 import { CategoryList } from '@/components/category-list'
 import { Header } from '@/components/header'
 import { ProductList } from '@/components/product-list'
+import { PromoBanner } from '@/components/promo-banner'
 import { Search } from '@/components/search'
 import { Button } from '@/components/ui/button'
 import { db } from '@/lib/prisma'
 import { ChevronRightIcon } from 'lucide-react'
-import Image from 'next/image'
 
 export default async function Home() {
   const products = await db.product.findMany({
@@ -35,15 +35,7 @@ export default async function Home() {
       </div>
 
       <div className="">
-        <Image
-          src="/promo-banner.png"
-          alt="hero"
-          width={0}
-          height={0}
-          className="h-auto w-full object-contain px-5 pt-6"
-          sizes="100vw"
-          quality={100}
-        />
+        <PromoBanner src="/promo-banner.png" alt="hero" />
       </div>
 
       <div className="space-y-4 pt-6">
@@ -58,6 +50,10 @@ export default async function Home() {
           </Button>
         </div>
         <ProductList products={products} />
+      </div>
+
+      <div className="py-5 pt-6">
+        <PromoBanner src="/promo-banner-02.png" alt="hero" />
       </div>
     </main>
   )
