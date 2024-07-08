@@ -146,6 +146,10 @@ export function ProductDetails({
         <h3 className="px-5 font-semibold">Sucos</h3>
         <ProductList products={complementaryProducts} />
       </div>
+
+      <div className="fixed bottom-0 left-0 right-0 bg-white px-5 py-2 shadow-[rgba(0,0,15,0.05)_10px_5px_4px_10px]">
+        <Button className="w-full font-semibold">Adicionar a sacola</Button>
+      </div>
     </>
   )
 }
