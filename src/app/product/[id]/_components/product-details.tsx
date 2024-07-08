@@ -82,7 +82,7 @@ export function ProductDetails({
 
           <div className="flex items-center gap-3">
             <Button
-              className="border border-muted-foreground hover:bg-primary hover:text-white"
+              className="border border-muted-foreground"
               onClick={handleDecreaseQuantity}
               disabled={quantity <= 1}
               variant={'ghost'}
@@ -94,7 +94,7 @@ export function ProductDetails({
               {String(quantity).padStart(2, '0')}
             </span>
             <Button
-              className="border border-muted-foreground hover:bg-primary hover:text-white"
+              className="bg-primary text-white hover:bg-primary/80 hover:text-white"
               onClick={handleIncreaseQuantity}
               variant={'ghost'}
               size={'icon'}
