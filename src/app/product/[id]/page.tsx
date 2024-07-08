@@ -24,6 +24,9 @@ export default async function ProductPage({ params }: IProductPageProps) {
       category: {
         name: 'Sucos',
       },
+      restaurant: {
+        id: product?.restaurant.id,
+      },
     },
     include: {
       restaurant: true,
