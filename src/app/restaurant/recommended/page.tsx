@@ -1,6 +1,8 @@
 import { Header } from '@/components/header'
 import { RestaurantItem } from '@/components/resaturant-item'
 import { db } from '@/lib/prisma'
+import { ChevronLeft } from 'lucide-react'
+import Link from 'next/link'
 
 export default async function RecommendedPage() {
   const restaurants = await db.restaurant.findMany({
@@ -26,9 +28,17 @@ export default async function RecommendedPage() {
     <>
       <Header />
       <div className="px-5 py-6">
-        <h2 className="mb-6 text-lg font-semibold">
-          Restaurantes Recomendados
-        </h2>
+        <div className="mb-6 flex items-center justify-between">
+          <h2 className="text-lg font-semibold">Restaurantes Recomendados</h2>
+
+          <Link
+            href={'/'}
+            className="flex items-center text-sm font-medium text-primary hover:text-secondary-foreground"
+          >
+            <ChevronLeft size={16} />
+            Voltar
+          </Link>
+        </div>
         <div className="flex w-full flex-col gap-6">
           {restaurants.map((restaurant) => (
             <RestaurantItem
