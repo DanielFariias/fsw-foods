@@ -32,8 +32,8 @@ const Search = () => {
         onChange={handleChange}
         value={search}
       />
-      <Button size="icon" type="submit">
-        <SearchIcon size={20} />
+      <Button size="icon" type="submit" className="aspect-square">
+        <SearchIcon size={18} />
       </Button>
     </form>
   )
