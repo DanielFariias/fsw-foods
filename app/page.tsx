@@ -61,7 +61,7 @@ const Home = async () => {
         <CategoryList />
       </div>
 
-      <div className="px-5 pt-6">
+      <div className="px-5 pt-4">
         <Link href={`/categories/${pizzasCategory?.id}/products`}>
           <PromoBanner
             src="/promo-banner-01.png"
